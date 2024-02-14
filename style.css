@@ -1,0 +1,104 @@
+@font-face {
+  font-family: cutefont;
+  src: url(BalonkuRegular-la1w.otf);
+}
+
+
+html, body {
+  height: 100%; /* This makes sure that the body takes up the full viewport height */
+  margin: 0; /* This removes the default margin from the body */
+  display: flex; /* This enables Flexbox for the body, making it a flex container */
+  justify-content: center; /* This centers its children horizontally */
+  align-items: center; /* This centers its children vertically */
+  flex-direction: column; /* This stacks children vertically */
+}
+
+#actualbutton {
+    text-align: center;
+    top: 50%;
+    left: 55%;
+}
+
+#yesbutton {
+  text-align: center;
+    top: 50%;
+    left: 45%;
+}
+
+
+ 
+.mainbutton {
+  background-color: #ff9cdb;
+  border-radius: 100px;
+  box-shadow: rgba(182, 44, 187, 0.2) 0 -25px 18px -14px inset,rgba(182, 44, 187, 0.2) 0 1px 2px,rgba(182, 44, 187, 0.2) 0 2px 4px,rgba(182, 44, 187, 0.2) 0 4px 8px,rgba(182, 44, 187, 0.2) 0 8px 16px,rgba(182, 44, 187, 0.2) 0 16px 32px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  font-weight: bold;
+  padding: 20px 30px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 40px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  position: absolute;
+  width: 130px;
+}
+
+.mainbutton:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg) translateY(-5px);
+  /* margin:0 10px; */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh; /* Adjust as per requirement */
+    position: relative;
+}
+
+#vdtext {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 20vh; /* Takes the full viewport height */
+  width: 100vw; /* Takes the full viewport width */
+}
+
+
+#vdtextsub {
+  font-size: 80px;
+  font-family: cutefont;
+  text-align: center;
+}
+
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  opacity: 1;
+}
+
+#vdtextsub {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  /* Add other styles as needed */
+}
+
+#whitePlane {
+  position: fixed; /* Fixed position to cover the entire screen */
+  top: 0;
+  left: 0;
+  width: 100vw;   /* Full width of the viewport */
+  height: 100vh;  /* Full height of the viewport */
+  background-color: white; /* White background */
+  z-index: 999;   /* High z-index to ensure it's above other elements */
+}
