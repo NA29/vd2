@@ -59,16 +59,36 @@ function fadeOut() {
 
 
 window.onload = function() {
+    // Check if the user is on a mobile device based on screen width
+    if (window.innerWidth <= 768) {
+        // Create an error message and append it to the body
+        var errorMsg = document.createElement('div');
+        errorMsg.innerHTML = "<h1>yo va sur ton ordi sinon c moche</h1>";
+        errorMsg.style.textAlign = 'center';
+        errorMsg.style.position = 'fixed';
+        errorMsg.style.width = '100%';
+        errorMsg.style.height = '100%';
+        errorMsg.style.backgroundColor = 'white';
+        errorMsg.style.zIndex = '9999';
+        errorMsg.style.top = '0';
+        errorMsg.style.left = '0';
+        errorMsg.style.display = 'flex';
+        errorMsg.style.alignItems = 'center';
+        errorMsg.style.justifyContent = 'center';
+        errorMsg.style.fontFamily = 'cutefont'
+        errorMsg.style.fontSize = '20px'
 
+        document.body.appendChild(errorMsg);
+
+        // Throw a new error to stop further execution
+        throw new Error("Access from mobile devices is not allowed.");
+    }
+
+    // Your existing code
     var divs = document.querySelectorAll('.centered-container');
-
-
-
-
-
     setTimeout(function() {
         document.getElementById('fullscreenImage').style.display = 'none';
-    }, 2500); // 2000 milliseconds = 2 seconds
+    }, 2500);
 
     setTimeout(function() {
         document.getElementById('whitePlane').style.display = 'none';
